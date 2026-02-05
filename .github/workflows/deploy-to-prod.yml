@@ -53,7 +53,7 @@ jobs:
           export SSH_KEY=/home/dgl/.ssh/github_prod
           export SSH_OPTS="-i $SSH_KEY -o IdentitiesOnly=yes -o StrictHostKeyChecking=no"
           
-          ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} << 'REMOTE'
+          ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} << 'ENDSSH'
             cd ~/rasa-nlu
             
             # Python 3.10 venv erstellen falls nicht vorhanden
@@ -68,7 +68,7 @@ jobs:
             pip install rasa==3.6.21
             
             echo "✅ Python environment ready"
-REMOTE
+          ENDSSH
       
       - name: Train Rasa Model on PROD
         env:
@@ -78,7 +78,7 @@ REMOTE
           export SSH_KEY=/home/dgl/.ssh/github_prod
           export SSH_OPTS="-i $SSH_KEY -o IdentitiesOnly=yes -o StrictHostKeyChecking=no"
           
-          ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} << 'REMOTE'
+          ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} << 'ENDSSH'
             cd ~/rasa-nlu
             source venv/bin/activate
             
@@ -87,7 +87,7 @@ REMOTE
             rasa train nlu
             
             echo "✅ Model trained"
-REMOTE
+          ENDSSH
       
       - name: Install Systemd Service
         env:
@@ -97,7 +97,7 @@ REMOTE
           export SSH_KEY=/home/dgl/.ssh/github_prod
           export SSH_OPTS="-i $SSH_KEY -o IdentitiesOnly=yes -o StrictHostKeyChecking=no"
           
-          ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} << 'REMOTE'
+          ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} << 'ENDSSH'
             # Systemd Service installieren
             sudo cp ~/rasa-nlu/rasa-nlu.service /etc/systemd/system/
             sudo systemctl daemon-reload
@@ -105,7 +105,7 @@ REMOTE
             sudo systemctl restart rasa-nlu
             
             echo "✅ Systemd service installed and started"
-REMOTE
+          ENDSSH
       
       - name: Verify Deployment
         env:

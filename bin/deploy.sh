@@ -2,7 +2,7 @@
 set -euo pipefail
 
 GITHUB_USER="didiator"
-GITHUB_REPO="stt-server"
+GITHUB_REPO="rasa-nlu"
 GITHUB_TOKEN=$(grep 'token = ' ~/.gitconfig | awk '{print $3}')
 
 if [ -z "$GITHUB_TOKEN" ]; then
