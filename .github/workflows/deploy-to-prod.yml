@@ -53,7 +53,7 @@ jobs:
           export SSH_KEY=/home/dgl/.ssh/github_prod
           export SSH_OPTS="-i $SSH_KEY -o IdentitiesOnly=yes -o StrictHostKeyChecking=no"
           
-          ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} "cd ~/rasa-nlu && /usr/bin/python3.10 -m venv venv"
+          ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} "cd ~/rasa-nlu && python3.10 -m venv venv"
           ssh $SSH_OPTS ${PROD_USER}@${PROD_HOST} "cd ~/rasa-nlu && source venv/bin/activate && pip install --upgrade pip && pip install rasa==3.6.21"
       
       - name: Train Rasa Model on PROD
