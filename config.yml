@@ -1,0 +1,43 @@
+# Rasa NLU Konfiguration für deutsches Voice-Projekt
+# Optimiert für CPU-only, schnelle Inferenz
+
+language: de
+
+pipeline:
+  # Tokenizer für deutsche Sprache
+  - name: WhitespaceTokenizer
+  
+  # Regex Features für Patterns
+  - name: RegexFeaturizer
+  
+  # Lexical Features (Wortformen)
+  - name: LexicalSyntacticFeaturizer
+  
+  # Count Vectors für BOW Features
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  
+  # DIET Classifier (Dual Intent Entity Transformer)
+  # Kombiniert Intent Classification + Entity Extraction
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+    model_confidence: softmax
+    # CPU-optimiert
+    entity_recognition: true
+    use_masked_language_model: false
+  
+  # Entity Synonyms für Normalisierung
+  - name: EntitySynonymMapper
+  
+  # Fallback Classifier für niedrige Confidence
+  - name: FallbackClassifier
+    threshold: 0.7
+    ambiguity_threshold: 0.1
+
+policies: []
+
+# Assistant ID
+assistant_id: voice_assistant_nlu

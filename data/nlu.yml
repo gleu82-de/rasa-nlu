@@ -1,0 +1,945 @@
+# Rasa NLU Training Data
+# Generiert: 2026-02-04T15:43:59.137Z
+# Devices: 129
+
+version: "3.1"
+
+nlu:
+- intent: device_control
+  examples: |
+    - schalte das [Licht](device) [an](action:ein)
+    - mach das [Licht](device) [aus](action:aus)
+    - [Licht](device) [ein](action:ein)
+    - [Licht](device) [aus](action:aus)
+    - stelle [Licht](device) auf [50](level) Prozent
+    - dimme [Licht](device) auf [75](level)
+    - schalte [Alarm](device) [ein](action:ein)
+    - [Alarm](device) [aus](action:aus)
+    - mach [Alarm](device) [an](action:ein)
+    - stelle [Alarm](device) auf [50](level) Prozent
+    - dimme [Alarm](device) auf [30](level)
+    - [Alarm](device) [ausschalten](action:aus)
+    - schalte [Außenbeleuchtung](device) [ein](action:ein)
+    - [Außenbeleuchtung](device) [aus](action:aus)
+    - mach [Außenbeleuchtung](device) [an](action:ein)
+    - stelle [Außenbeleuchtung](device) auf [50](level) Prozent
+    - dimme [Außenbeleuchtung](device) auf [30](level)
+    - [Außenbeleuchtung](device) [ausschalten](action:aus)
+    - schalte [Bad oben](device) [ein](action:ein)
+    - [Bad oben](device) [aus](action:aus)
+    - mach [Bad oben](device) [an](action:ein)
+    - stelle [Bad oben](device) auf [50](level) Prozent
+    - dimme [Bad oben](device) auf [30](level)
+    - [Bad oben](device) [ausschalten](action:aus)
+    - schalte [Bad unten](device) [ein](action:ein)
+    - [Bad unten](device) [aus](action:aus)
+    - mach [Bad unten](device) [an](action:ein)
+    - stelle [Bad unten](device) auf [50](level) Prozent
+    - dimme [Bad unten](device) auf [30](level)
+    - [Bad unten](device) [ausschalten](action:aus)
+    - schalte [Bewaesserung Garten](device) [ein](action:ein)
+    - [Bewaesserung Garten](device) [aus](action:aus)
+    - mach [Bewaesserung Garten](device) [an](action:ein)
+    - stelle [Bewaesserung Garten](device) auf [50](level) Prozent
+    - dimme [Bewaesserung Garten](device) auf [30](level)
+    - [Bewaesserung Garten](device) [ausschalten](action:aus)
+    - schalte [Bewaesserung Rosen](device) [ein](action:ein)
+    - [Bewaesserung Rosen](device) [aus](action:aus)
+    - mach [Bewaesserung Rosen](device) [an](action:ein)
+    - stelle [Bewaesserung Rosen](device) auf [50](level) Prozent
+    - dimme [Bewaesserung Rosen](device) auf [30](level)
+    - [Bewaesserung Rosen](device) [ausschalten](action:aus)
+    - schalte [Bewaesserung Teich](device) [ein](action:ein)
+    - [Bewaesserung Teich](device) [aus](action:aus)
+    - mach [Bewaesserung Teich](device) [an](action:ein)
+    - stelle [Bewaesserung Teich](device) auf [50](level) Prozent
+    - dimme [Bewaesserung Teich](device) auf [30](level)
+    - [Bewaesserung Teich](device) [ausschalten](action:aus)
+    - schalte [Büro](device) [ein](action:ein)
+    - [Büro](device) [aus](action:aus)
+    - mach [Büro](device) [an](action:ein)
+    - stelle [Büro](device) auf [50](level) Prozent
+    - dimme [Büro](device) auf [30](level)
+    - [Büro](device) [ausschalten](action:aus)
+    - schalte [Computer](device) [ein](action:ein)
+    - [Computer](device) [aus](action:aus)
+    - mach [Computer](device) [an](action:ein)
+    - stelle [Computer](device) auf [50](level) Prozent
+    - dimme [Computer](device) auf [30](level)
+    - [Computer](device) [ausschalten](action:aus)
+    - schalte [Dachgeschoß Vorlauf](device) [ein](action:ein)
+    - [Dachgeschoß Vorlauf](device) [aus](action:aus)
+    - mach [Dachgeschoß Vorlauf](device) [an](action:ein)
+    - stelle [Dachgeschoß Vorlauf](device) auf [50](level) Prozent
+    - dimme [Dachgeschoß Vorlauf](device) auf [30](level)
+    - [Dachgeschoß Vorlauf](device) [ausschalten](action:aus)
+    - schalte [Dachgeschoss Rücklauf](device) [ein](action:ein)
+    - [Dachgeschoss Rücklauf](device) [aus](action:aus)
+    - mach [Dachgeschoss Rücklauf](device) [an](action:ein)
+    - stelle [Dachgeschoss Rücklauf](device) auf [50](level) Prozent
+    - dimme [Dachgeschoss Rücklauf](device) auf [30](level)
+    - [Dachgeschoss Rücklauf](device) [ausschalten](action:aus)
+    - schalte [Deckenlicht Kueche](device) [ein](action:ein)
+    - [Deckenlicht Kueche](device) [aus](action:aus)
+    - mach [Deckenlicht Kueche](device) [an](action:ein)
+    - stelle [Deckenlicht Kueche](device) auf [50](level) Prozent
+    - dimme [Deckenlicht Kueche](device) auf [30](level)
+    - [Deckenlicht Kueche](device) [ausschalten](action:aus)
+    - schalte [Deko Flur](device) [ein](action:ein)
+    - [Deko Flur](device) [aus](action:aus)
+    - mach [Deko Flur](device) [an](action:ein)
+    - stelle [Deko Flur](device) auf [50](level) Prozent
+    - dimme [Deko Flur](device) auf [30](level)
+    - [Deko Flur](device) [ausschalten](action:aus)
+    - schalte [Erdgeschoss Rücklauf](device) [ein](action:ein)
+    - [Erdgeschoss Rücklauf](device) [aus](action:aus)
+    - mach [Erdgeschoss Rücklauf](device) [an](action:ein)
+    - stelle [Erdgeschoss Rücklauf](device) auf [50](level) Prozent
+    - dimme [Erdgeschoss Rücklauf](device) auf [30](level)
+    - [Erdgeschoss Rücklauf](device) [ausschalten](action:aus)
+    - schalte [Erdgeschoss Vorlauf](device) [ein](action:ein)
+    - [Erdgeschoss Vorlauf](device) [aus](action:aus)
+    - mach [Erdgeschoss Vorlauf](device) [an](action:ein)
+    - stelle [Erdgeschoss Vorlauf](device) auf [50](level) Prozent
+    - dimme [Erdgeschoss Vorlauf](device) auf [30](level)
+    - [Erdgeschoss Vorlauf](device) [ausschalten](action:aus)
+    - schalte [Fenster Garage](device) [ein](action:ein)
+    - [Fenster Garage](device) [aus](action:aus)
+    - mach [Fenster Garage](device) [an](action:ein)
+    - stelle [Fenster Garage](device) auf [50](level) Prozent
+    - dimme [Fenster Garage](device) auf [30](level)
+    - [Fenster Garage](device) [ausschalten](action:aus)
+    - schalte [Fernseher](device) [ein](action:ein)
+    - [Fernseher](device) [aus](action:aus)
+    - mach [Fernseher](device) [an](action:ein)
+    - stelle [Fernseher](device) auf [50](level) Prozent
+    - dimme [Fernseher](device) auf [30](level)
+    - [Fernseher](device) [ausschalten](action:aus)
+    - schalte [Festbeleuchtung](device) [ein](action:ein)
+    - [Festbeleuchtung](device) [aus](action:aus)
+    - mach [Festbeleuchtung](device) [an](action:ein)
+    - stelle [Festbeleuchtung](device) auf [50](level) Prozent
+    - dimme [Festbeleuchtung](device) auf [30](level)
+    - [Festbeleuchtung](device) [ausschalten](action:aus)
+    - schalte [Flur unten](device) [ein](action:ein)
+    - [Flur unten](device) [aus](action:aus)
+    - mach [Flur unten](device) [an](action:ein)
+    - stelle [Flur unten](device) auf [50](level) Prozent
+    - dimme [Flur unten](device) auf [30](level)
+    - [Flur unten](device) [ausschalten](action:aus)
+    - schalte [Flurlicht](device) [ein](action:ein)
+    - [Flurlicht](device) [aus](action:aus)
+    - mach [Flurlicht](device) [an](action:ein)
+    - stelle [Flurlicht](device) auf [50](level) Prozent
+    - dimme [Flurlicht](device) auf [30](level)
+    - [Flurlicht](device) [ausschalten](action:aus)
+    - schalte [Frosch](device) [ein](action:ein)
+    - [Frosch](device) [aus](action:aus)
+    - mach [Frosch](device) [an](action:ein)
+    - stelle [Frosch](device) auf [50](level) Prozent
+    - dimme [Frosch](device) auf [30](level)
+    - [Frosch](device) [ausschalten](action:aus)
+    - schalte [Fussheizung](device) [ein](action:ein)
+    - [Fussheizung](device) [aus](action:aus)
+    - mach [Fussheizung](device) [an](action:ein)
+    - stelle [Fussheizung](device) auf [50](level) Prozent
+    - dimme [Fussheizung](device) auf [30](level)
+    - [Fussheizung](device) [ausschalten](action:aus)
+    - schalte [Garage](device) [ein](action:ein)
+    - [Garage](device) [aus](action:aus)
+    - mach [Garage](device) [an](action:ein)
+    - stelle [Garage](device) auf [50](level) Prozent
+    - dimme [Garage](device) auf [30](level)
+    - [Garage](device) [ausschalten](action:aus)
+    - schalte [Garage ist offen](device) [ein](action:ein)
+    - [Garage ist offen](device) [aus](action:aus)
+    - mach [Garage ist offen](device) [an](action:ein)
+    - stelle [Garage ist offen](device) auf [50](level) Prozent
+    - dimme [Garage ist offen](device) auf [30](level)
+    - [Garage ist offen](device) [ausschalten](action:aus)
+    - schalte [Garage ist zu](device) [ein](action:ein)
+    - [Garage ist zu](device) [aus](action:aus)
+    - mach [Garage ist zu](device) [an](action:ein)
+    - stelle [Garage ist zu](device) auf [50](level) Prozent
+    - dimme [Garage ist zu](device) auf [30](level)
+    - [Garage ist zu](device) [ausschalten](action:aus)
+    - schalte [Gargentor](device) [ein](action:ein)
+    - [Gargentor](device) [aus](action:aus)
+    - mach [Gargentor](device) [an](action:ein)
+    - stelle [Gargentor](device) auf [50](level) Prozent
+    - dimme [Gargentor](device) auf [30](level)
+    - [Gargentor](device) [ausschalten](action:aus)
+    - schalte [Garten](device) [ein](action:ein)
+    - [Garten](device) [aus](action:aus)
+    - mach [Garten](device) [an](action:ein)
+    - stelle [Garten](device) auf [50](level) Prozent
+    - dimme [Garten](device) auf [30](level)
+    - [Garten](device) [ausschalten](action:aus)
+    - schalte [Gäste WC](device) [ein](action:ein)
+    - [Gäste WC](device) [aus](action:aus)
+    - mach [Gäste WC](device) [an](action:ein)
+    - stelle [Gäste WC](device) auf [50](level) Prozent
+    - dimme [Gäste WC](device) auf [30](level)
+    - [Gäste WC](device) [ausschalten](action:aus)
+    - schalte [Gästezimmer](device) [ein](action:ein)
+    - [Gästezimmer](device) [aus](action:aus)
+    - mach [Gästezimmer](device) [an](action:ein)
+    - stelle [Gästezimmer](device) auf [50](level) Prozent
+    - dimme [Gästezimmer](device) auf [30](level)
+    - [Gästezimmer](device) [ausschalten](action:aus)
+    - schalte [Heiko](device) [ein](action:ein)
+    - [Heiko](device) [aus](action:aus)
+    - mach [Heiko](device) [an](action:ein)
+    - stelle [Heiko](device) auf [50](level) Prozent
+    - dimme [Heiko](device) auf [30](level)
+    - [Heiko](device) [ausschalten](action:aus)
+    - schalte [Heizkörperventil Bad oben](device) [ein](action:ein)
+    - [Heizkörperventil Bad oben](device) [aus](action:aus)
+    - mach [Heizkörperventil Bad oben](device) [an](action:ein)
+    - stelle [Heizkörperventil Bad oben](device) auf [50](level) Prozent
+    - dimme [Heizkörperventil Bad oben](device) auf [30](level)
+    - [Heizkörperventil Bad oben](device) [ausschalten](action:aus)
+    - schalte [Heizkörperventil Büro](device) [ein](action:ein)
+    - [Heizkörperventil Büro](device) [aus](action:aus)
+    - mach [Heizkörperventil Büro](device) [an](action:ein)
+    - stelle [Heizkörperventil Büro](device) auf [50](level) Prozent
+    - dimme [Heizkörperventil Büro](device) auf [30](level)
+    - [Heizkörperventil Büro](device) [ausschalten](action:aus)
+    - schalte [Heizkörperventil Heiko](device) [ein](action:ein)
+    - [Heizkörperventil Heiko](device) [aus](action:aus)
+    - mach [Heizkörperventil Heiko](device) [an](action:ein)
+    - stelle [Heizkörperventil Heiko](device) auf [50](level) Prozent
+    - dimme [Heizkörperventil Heiko](device) auf [30](level)
+    - [Heizkörperventil Heiko](device) [ausschalten](action:aus)
+    - schalte [Heizkörperventil Netti](device) [ein](action:ein)
+    - [Heizkörperventil Netti](device) [aus](action:aus)
+    - mach [Heizkörperventil Netti](device) [an](action:ein)
+    - stelle [Heizkörperventil Netti](device) auf [50](level) Prozent
+    - dimme [Heizkörperventil Netti](device) auf [30](level)
+    - [Heizkörperventil Netti](device) [ausschalten](action:aus)
+    - schalte [Heizkörperventile](device) [ein](action:ein)
+    - [Heizkörperventile](device) [aus](action:aus)
+    - mach [Heizkörperventile](device) [an](action:ein)
+    - stelle [Heizkörperventile](device) auf [50](level) Prozent
+    - dimme [Heizkörperventile](device) auf [30](level)
+    - [Heizkörperventile](device) [ausschalten](action:aus)
+    - schalte [Heizung](device) [ein](action:ein)
+    - [Heizung](device) [aus](action:aus)
+    - mach [Heizung](device) [an](action:ein)
+    - stelle [Heizung](device) auf [50](level) Prozent
+    - dimme [Heizung](device) auf [30](level)
+    - [Heizung](device) [ausschalten](action:aus)
+    - schalte [Heizungskeller](device) [ein](action:ein)
+    - [Heizungskeller](device) [aus](action:aus)
+    - mach [Heizungskeller](device) [an](action:ein)
+    - stelle [Heizungskeller](device) auf [50](level) Prozent
+    - dimme [Heizungskeller](device) auf [30](level)
+    - [Heizungskeller](device) [ausschalten](action:aus)
+    - schalte [Infrarotheizung Kueche](device) [ein](action:ein)
+    - [Infrarotheizung Kueche](device) [aus](action:aus)
+    - mach [Infrarotheizung Kueche](device) [an](action:ein)
+    - stelle [Infrarotheizung Kueche](device) auf [50](level) Prozent
+    - dimme [Infrarotheizung Kueche](device) auf [30](level)
+    - [Infrarotheizung Kueche](device) [ausschalten](action:aus)
+    - schalte [Jalosien](device) [ein](action:ein)
+    - [Jalosien](device) [aus](action:aus)
+    - mach [Jalosien](device) [an](action:ein)
+    - stelle [Jalosien](device) auf [50](level) Prozent
+    - dimme [Jalosien](device) auf [30](level)
+    - [Jalosien](device) [ausschalten](action:aus)
+    - schalte [Jalousie Beach](device) [ein](action:ein)
+    - [Jalousie Beach](device) [aus](action:aus)
+    - mach [Jalousie Beach](device) [an](action:ein)
+    - stelle [Jalousie Beach](device) auf [50](level) Prozent
+    - dimme [Jalousie Beach](device) auf [30](level)
+    - [Jalousie Beach](device) [ausschalten](action:aus)
+    - schalte [Jalousie Fenster zum Wintergarten](device) [ein](action:ein)
+    - [Jalousie Fenster zum Wintergarten](device) [aus](action:aus)
+    - mach [Jalousie Fenster zum Wintergarten](device) [an](action:ein)
+    - stelle [Jalousie Fenster zum Wintergarten](device) auf [50](level) Prozent
+    - dimme [Jalousie Fenster zum Wintergarten](device) auf [30](level)
+    - [Jalousie Fenster zum Wintergarten](device) [ausschalten](action:aus)
+    - schalte [Jalousie Garage links](device) [ein](action:ein)
+    - [Jalousie Garage links](device) [aus](action:aus)
+    - mach [Jalousie Garage links](device) [an](action:ein)
+    - stelle [Jalousie Garage links](device) auf [50](level) Prozent
+    - dimme [Jalousie Garage links](device) auf [30](level)
+    - [Jalousie Garage links](device) [ausschalten](action:aus)
+    - schalte [Jalousie Garage rechts](device) [ein](action:ein)
+    - [Jalousie Garage rechts](device) [aus](action:aus)
+    - mach [Jalousie Garage rechts](device) [an](action:ein)
+    - stelle [Jalousie Garage rechts](device) auf [50](level) Prozent
+    - dimme [Jalousie Garage rechts](device) auf [30](level)
+    - [Jalousie Garage rechts](device) [ausschalten](action:aus)
+    - schalte [Jalousie Kueche](device) [ein](action:ein)
+    - [Jalousie Kueche](device) [aus](action:aus)
+    - mach [Jalousie Kueche](device) [an](action:ein)
+    - stelle [Jalousie Kueche](device) auf [50](level) Prozent
+    - dimme [Jalousie Kueche](device) auf [30](level)
+    - [Jalousie Kueche](device) [ausschalten](action:aus)
+    - schalte [Jalousie Rosen](device) [ein](action:ein)
+    - [Jalousie Rosen](device) [aus](action:aus)
+    - mach [Jalousie Rosen](device) [an](action:ein)
+    - stelle [Jalousie Rosen](device) auf [50](level) Prozent
+    - dimme [Jalousie Rosen](device) auf [30](level)
+    - [Jalousie Rosen](device) [ausschalten](action:aus)
+    - schalte [Jalousie Schlafzimmer links](device) [ein](action:ein)
+    - [Jalousie Schlafzimmer links](device) [aus](action:aus)
+    - mach [Jalousie Schlafzimmer links](device) [an](action:ein)
+    - stelle [Jalousie Schlafzimmer links](device) auf [50](level) Prozent
+    - dimme [Jalousie Schlafzimmer links](device) auf [30](level)
+    - [Jalousie Schlafzimmer links](device) [ausschalten](action:aus)
+    - schalte [Jalousie Schlafzimmer rechts](device) [ein](action:ein)
+    - [Jalousie Schlafzimmer rechts](device) [aus](action:aus)
+    - mach [Jalousie Schlafzimmer rechts](device) [an](action:ein)
+    - stelle [Jalousie Schlafzimmer rechts](device) auf [50](level) Prozent
+    - dimme [Jalousie Schlafzimmer rechts](device) auf [30](level)
+    - [Jalousie Schlafzimmer rechts](device) [ausschalten](action:aus)
+    - schalte [Jalousie Strasse](device) [ein](action:ein)
+    - [Jalousie Strasse](device) [aus](action:aus)
+    - mach [Jalousie Strasse](device) [an](action:ein)
+    - stelle [Jalousie Strasse](device) auf [50](level) Prozent
+    - dimme [Jalousie Strasse](device) auf [30](level)
+    - [Jalousie Strasse](device) [ausschalten](action:aus)
+    - schalte [Jalousie Wein links](device) [ein](action:ein)
+    - [Jalousie Wein links](device) [aus](action:aus)
+    - mach [Jalousie Wein links](device) [an](action:ein)
+    - stelle [Jalousie Wein links](device) auf [50](level) Prozent
+    - dimme [Jalousie Wein links](device) auf [30](level)
+    - [Jalousie Wein links](device) [ausschalten](action:aus)
+    - schalte [Jalousie Wein Mitte](device) [ein](action:ein)
+    - [Jalousie Wein Mitte](device) [aus](action:aus)
+    - mach [Jalousie Wein Mitte](device) [an](action:ein)
+    - stelle [Jalousie Wein Mitte](device) auf [50](level) Prozent
+    - dimme [Jalousie Wein Mitte](device) auf [30](level)
+    - [Jalousie Wein Mitte](device) [ausschalten](action:aus)
+    - schalte [Jalousie Wein rechts](device) [ein](action:ein)
+    - [Jalousie Wein rechts](device) [aus](action:aus)
+    - mach [Jalousie Wein rechts](device) [an](action:ein)
+    - stelle [Jalousie Wein rechts](device) auf [50](level) Prozent
+    - dimme [Jalousie Wein rechts](device) auf [30](level)
+    - [Jalousie Wein rechts](device) [ausschalten](action:aus)
+    - schalte [Jalousie Wohnzimmertuer](device) [ein](action:ein)
+    - [Jalousie Wohnzimmertuer](device) [aus](action:aus)
+    - mach [Jalousie Wohnzimmertuer](device) [an](action:ein)
+    - stelle [Jalousie Wohnzimmertuer](device) auf [50](level) Prozent
+    - dimme [Jalousie Wohnzimmertuer](device) auf [30](level)
+    - [Jalousie Wohnzimmertuer](device) [ausschalten](action:aus)
+    - schalte [Kamin Rücklauf](device) [ein](action:ein)
+    - [Kamin Rücklauf](device) [aus](action:aus)
+    - mach [Kamin Rücklauf](device) [an](action:ein)
+    - stelle [Kamin Rücklauf](device) auf [50](level) Prozent
+    - dimme [Kamin Rücklauf](device) auf [30](level)
+    - [Kamin Rücklauf](device) [ausschalten](action:aus)
+    - schalte [Kamin Vorlauf](device) [ein](action:ein)
+    - [Kamin Vorlauf](device) [aus](action:aus)
+    - mach [Kamin Vorlauf](device) [an](action:ein)
+    - stelle [Kamin Vorlauf](device) auf [50](level) Prozent
+    - dimme [Kamin Vorlauf](device) auf [30](level)
+    - [Kamin Vorlauf](device) [ausschalten](action:aus)
+    - schalte [Kellerflur](device) [ein](action:ein)
+    - [Kellerflur](device) [aus](action:aus)
+    - mach [Kellerflur](device) [an](action:ein)
+    - stelle [Kellerflur](device) auf [50](level) Prozent
+    - dimme [Kellerflur](device) auf [30](level)
+    - [Kellerflur](device) [ausschalten](action:aus)
+    - schalte [Klima](device) [ein](action:ein)
+    - [Klima](device) [aus](action:aus)
+    - mach [Klima](device) [an](action:ein)
+    - stelle [Klima](device) auf [50](level) Prozent
+    - dimme [Klima](device) auf [30](level)
+    - [Klima](device) [ausschalten](action:aus)
+    - schalte [Klima B](device) [ein](action:ein)
+    - [Klima B](device) [aus](action:aus)
+    - mach [Klima B](device) [an](action:ein)
+    - stelle [Klima B](device) auf [50](level) Prozent
+    - dimme [Klima B](device) auf [30](level)
+    - [Klima B](device) [ausschalten](action:aus)
+    - schalte [klima-b-ro](device) [ein](action:ein)
+    - [klima-b-ro](device) [aus](action:aus)
+    - mach [klima-b-ro](device) [an](action:ein)
+    - stelle [klima-b-ro](device) auf [50](level) Prozent
+    - dimme [klima-b-ro](device) auf [30](level)
+    - [klima-b-ro](device) [ausschalten](action:aus)
+    - schalte [klima-schlafzimmer](device) [ein](action:ein)
+    - [klima-schlafzimmer](device) [aus](action:aus)
+    - mach [klima-schlafzimmer](device) [an](action:ein)
+    - stelle [klima-schlafzimmer](device) auf [50](level) Prozent
+    - dimme [klima-schlafzimmer](device) auf [30](level)
+    - [klima-schlafzimmer](device) [ausschalten](action:aus)
+    - schalte [klima-wintergarten](device) [ein](action:ein)
+    - [klima-wintergarten](device) [aus](action:aus)
+    - mach [klima-wintergarten](device) [an](action:ein)
+    - stelle [klima-wintergarten](device) auf [50](level) Prozent
+    - dimme [klima-wintergarten](device) auf [30](level)
+    - [klima-wintergarten](device) [ausschalten](action:aus)
+    - schalte [Klimaanlagen](device) [ein](action:ein)
+    - [Klimaanlagen](device) [aus](action:aus)
+    - mach [Klimaanlagen](device) [an](action:ein)
+    - stelle [Klimaanlagen](device) auf [50](level) Prozent
+    - dimme [Klimaanlagen](device) auf [30](level)
+    - [Klimaanlagen](device) [ausschalten](action:aus)
+    - schalte [Klolicht](device) [ein](action:ein)
+    - [Klolicht](device) [aus](action:aus)
+    - mach [Klolicht](device) [an](action:ein)
+    - stelle [Klolicht](device) auf [50](level) Prozent
+    - dimme [Klolicht](device) auf [30](level)
+    - [Klolicht](device) [ausschalten](action:aus)
+    - schalte [Konvektor](device) [ein](action:ein)
+    - [Konvektor](device) [aus](action:aus)
+    - mach [Konvektor](device) [an](action:ein)
+    - stelle [Konvektor](device) auf [50](level) Prozent
+    - dimme [Konvektor](device) auf [30](level)
+    - [Konvektor](device) [ausschalten](action:aus)
+    - schalte [Küche](device) [ein](action:ein)
+    - [Küche](device) [aus](action:aus)
+    - mach [Küche](device) [an](action:ein)
+    - stelle [Küche](device) auf [50](level) Prozent
+    - dimme [Küche](device) auf [30](level)
+    - [Küche](device) [ausschalten](action:aus)
+    - schalte [Leselicht](device) [ein](action:ein)
+    - [Leselicht](device) [aus](action:aus)
+    - mach [Leselicht](device) [an](action:ein)
+    - stelle [Leselicht](device) auf [50](level) Prozent
+    - dimme [Leselicht](device) auf [30](level)
+    - [Leselicht](device) [ausschalten](action:aus)
+    - schalte [Licht](device) [ein](action:ein)
+    - [Licht](device) [aus](action:aus)
+    - mach [Licht](device) [an](action:ein)
+    - stelle [Licht](device) auf [50](level) Prozent
+    - dimme [Licht](device) auf [30](level)
+    - [Licht](device) [ausschalten](action:aus)
+    - schalte [Licht Esstisch](device) [ein](action:ein)
+    - [Licht Esstisch](device) [aus](action:aus)
+    - mach [Licht Esstisch](device) [an](action:ein)
+    - stelle [Licht Esstisch](device) auf [50](level) Prozent
+    - dimme [Licht Esstisch](device) auf [30](level)
+    - [Licht Esstisch](device) [ausschalten](action:aus)
+    - schalte [Licht Fruehstueckstisch](device) [ein](action:ein)
+    - [Licht Fruehstueckstisch](device) [aus](action:aus)
+    - mach [Licht Fruehstueckstisch](device) [an](action:ein)
+    - stelle [Licht Fruehstueckstisch](device) auf [50](level) Prozent
+    - dimme [Licht Fruehstueckstisch](device) auf [30](level)
+    - [Licht Fruehstueckstisch](device) [ausschalten](action:aus)
+    - schalte [Licht Gaeste WC](device) [ein](action:ein)
+    - [Licht Gaeste WC](device) [aus](action:aus)
+    - mach [Licht Gaeste WC](device) [an](action:ein)
+    - stelle [Licht Gaeste WC](device) auf [50](level) Prozent
+    - dimme [Licht Gaeste WC](device) auf [30](level)
+    - [Licht Gaeste WC](device) [ausschalten](action:aus)
+    - schalte [Licht Kellertreppe](device) [ein](action:ein)
+    - [Licht Kellertreppe](device) [aus](action:aus)
+    - mach [Licht Kellertreppe](device) [an](action:ein)
+    - stelle [Licht Kellertreppe](device) auf [50](level) Prozent
+    - dimme [Licht Kellertreppe](device) auf [30](level)
+    - [Licht Kellertreppe](device) [ausschalten](action:aus)
+    - schalte [Licht Lesen](device) [ein](action:ein)
+    - [Licht Lesen](device) [aus](action:aus)
+    - mach [Licht Lesen](device) [an](action:ein)
+    - stelle [Licht Lesen](device) auf [50](level) Prozent
+    - dimme [Licht Lesen](device) auf [30](level)
+    - [Licht Lesen](device) [ausschalten](action:aus)
+    - schalte [Licht Schlafzimmer](device) [ein](action:ein)
+    - [Licht Schlafzimmer](device) [aus](action:aus)
+    - mach [Licht Schlafzimmer](device) [an](action:ein)
+    - stelle [Licht Schlafzimmer](device) auf [50](level) Prozent
+    - dimme [Licht Schlafzimmer](device) auf [30](level)
+    - [Licht Schlafzimmer](device) [ausschalten](action:aus)
+    - schalte [Licht Sitzecke](device) [ein](action:ein)
+    - [Licht Sitzecke](device) [aus](action:aus)
+    - mach [Licht Sitzecke](device) [an](action:ein)
+    - stelle [Licht Sitzecke](device) auf [50](level) Prozent
+    - dimme [Licht Sitzecke](device) auf [30](level)
+    - [Licht Sitzecke](device) [ausschalten](action:aus)
+    - schalte [Licht Wand](device) [ein](action:ein)
+    - [Licht Wand](device) [aus](action:aus)
+    - mach [Licht Wand](device) [an](action:ein)
+    - stelle [Licht Wand](device) auf [50](level) Prozent
+    - dimme [Licht Wand](device) auf [30](level)
+    - [Licht Wand](device) [ausschalten](action:aus)
+    - schalte [Licht Wintergarten Decke](device) [ein](action:ein)
+    - [Licht Wintergarten Decke](device) [aus](action:aus)
+    - mach [Licht Wintergarten Decke](device) [an](action:ein)
+    - stelle [Licht Wintergarten Decke](device) auf [50](level) Prozent
+    - dimme [Licht Wintergarten Decke](device) auf [30](level)
+    - [Licht Wintergarten Decke](device) [ausschalten](action:aus)
+    - schalte [Licht Wintergarten Tisch](device) [ein](action:ein)
+    - [Licht Wintergarten Tisch](device) [aus](action:aus)
+    - mach [Licht Wintergarten Tisch](device) [an](action:ein)
+    - stelle [Licht Wintergarten Tisch](device) auf [50](level) Prozent
+    - dimme [Licht Wintergarten Tisch](device) auf [30](level)
+    - [Licht Wintergarten Tisch](device) [ausschalten](action:aus)
+    - schalte [Licht Wohnzimmer](device) [ein](action:ein)
+    - [Licht Wohnzimmer](device) [aus](action:aus)
+    - mach [Licht Wohnzimmer](device) [an](action:ein)
+    - stelle [Licht Wohnzimmer](device) auf [50](level) Prozent
+    - dimme [Licht Wohnzimmer](device) auf [30](level)
+    - [Licht Wohnzimmer](device) [ausschalten](action:aus)
+    - schalte [Lüftung](device) [ein](action:ein)
+    - [Lüftung](device) [aus](action:aus)
+    - mach [Lüftung](device) [an](action:ein)
+    - stelle [Lüftung](device) auf [50](level) Prozent
+    - dimme [Lüftung](device) auf [30](level)
+    - [Lüftung](device) [ausschalten](action:aus)
+    - schalte [Lupe](device) [ein](action:ein)
+    - [Lupe](device) [aus](action:aus)
+    - mach [Lupe](device) [an](action:ein)
+    - stelle [Lupe](device) auf [50](level) Prozent
+    - dimme [Lupe](device) auf [30](level)
+    - [Lupe](device) [ausschalten](action:aus)
+    - schalte [Netti](device) [ein](action:ein)
+    - [Netti](device) [aus](action:aus)
+    - mach [Netti](device) [an](action:ein)
+    - stelle [Netti](device) auf [50](level) Prozent
+    - dimme [Netti](device) auf [30](level)
+    - [Netti](device) [ausschalten](action:aus)
+    - schalte [Nibe AUX3 Urlaub](device) [ein](action:ein)
+    - [Nibe AUX3 Urlaub](device) [aus](action:aus)
+    - mach [Nibe AUX3 Urlaub](device) [an](action:ein)
+    - stelle [Nibe AUX3 Urlaub](device) auf [50](level) Prozent
+    - dimme [Nibe AUX3 Urlaub](device) auf [30](level)
+    - [Nibe AUX3 Urlaub](device) [ausschalten](action:aus)
+    - schalte [Puffer Zone heiß](device) [ein](action:ein)
+    - [Puffer Zone heiß](device) [aus](action:aus)
+    - mach [Puffer Zone heiß](device) [an](action:ein)
+    - stelle [Puffer Zone heiß](device) auf [50](level) Prozent
+    - dimme [Puffer Zone heiß](device) auf [30](level)
+    - [Puffer Zone heiß](device) [ausschalten](action:aus)
+    - schalte [Puffer Zone kalt](device) [ein](action:ein)
+    - [Puffer Zone kalt](device) [aus](action:aus)
+    - mach [Puffer Zone kalt](device) [an](action:ein)
+    - stelle [Puffer Zone kalt](device) auf [50](level) Prozent
+    - dimme [Puffer Zone kalt](device) auf [30](level)
+    - [Puffer Zone kalt](device) [ausschalten](action:aus)
+    - schalte [Puffer Zone lau](device) [ein](action:ein)
+    - [Puffer Zone lau](device) [aus](action:aus)
+    - mach [Puffer Zone lau](device) [an](action:ein)
+    - stelle [Puffer Zone lau](device) auf [50](level) Prozent
+    - dimme [Puffer Zone lau](device) auf [30](level)
+    - [Puffer Zone lau](device) [ausschalten](action:aus)
+    - schalte [Puffer Zone warm](device) [ein](action:ein)
+    - [Puffer Zone warm](device) [aus](action:aus)
+    - mach [Puffer Zone warm](device) [an](action:ein)
+    - stelle [Puffer Zone warm](device) auf [50](level) Prozent
+    - dimme [Puffer Zone warm](device) auf [30](level)
+    - [Puffer Zone warm](device) [ausschalten](action:aus)
+    - schalte [Pumpe Dachgeschoss](device) [ein](action:ein)
+    - [Pumpe Dachgeschoss](device) [aus](action:aus)
+    - mach [Pumpe Dachgeschoss](device) [an](action:ein)
+    - stelle [Pumpe Dachgeschoss](device) auf [50](level) Prozent
+    - dimme [Pumpe Dachgeschoss](device) auf [30](level)
+    - [Pumpe Dachgeschoss](device) [ausschalten](action:aus)
+    - schalte [Pumpe Wintergarten](device) [ein](action:ein)
+    - [Pumpe Wintergarten](device) [aus](action:aus)
+    - mach [Pumpe Wintergarten](device) [an](action:ein)
+    - stelle [Pumpe Wintergarten](device) auf [50](level) Prozent
+    - dimme [Pumpe Wintergarten](device) auf [30](level)
+    - [Pumpe Wintergarten](device) [ausschalten](action:aus)
+    - schalte [Radiowecker](device) [ein](action:ein)
+    - [Radiowecker](device) [aus](action:aus)
+    - mach [Radiowecker](device) [an](action:ein)
+    - stelle [Radiowecker](device) auf [50](level) Prozent
+    - dimme [Radiowecker](device) auf [30](level)
+    - [Radiowecker](device) [ausschalten](action:aus)
+    - schalte [Rollo Beach](device) [ein](action:ein)
+    - [Rollo Beach](device) [aus](action:aus)
+    - mach [Rollo Beach](device) [an](action:ein)
+    - stelle [Rollo Beach](device) auf [50](level) Prozent
+    - dimme [Rollo Beach](device) auf [30](level)
+    - [Rollo Beach](device) [ausschalten](action:aus)
+    - schalte [Rollo Garage links](device) [ein](action:ein)
+    - [Rollo Garage links](device) [aus](action:aus)
+    - mach [Rollo Garage links](device) [an](action:ein)
+    - stelle [Rollo Garage links](device) auf [50](level) Prozent
+    - dimme [Rollo Garage links](device) auf [30](level)
+    - [Rollo Garage links](device) [ausschalten](action:aus)
+    - schalte [Rollo Garage rechts](device) [ein](action:ein)
+    - [Rollo Garage rechts](device) [aus](action:aus)
+    - mach [Rollo Garage rechts](device) [an](action:ein)
+    - stelle [Rollo Garage rechts](device) auf [50](level) Prozent
+    - dimme [Rollo Garage rechts](device) auf [30](level)
+    - [Rollo Garage rechts](device) [ausschalten](action:aus)
+    - schalte [Rollo Kueche](device) [ein](action:ein)
+    - [Rollo Kueche](device) [aus](action:aus)
+    - mach [Rollo Kueche](device) [an](action:ein)
+    - stelle [Rollo Kueche](device) auf [50](level) Prozent
+    - dimme [Rollo Kueche](device) auf [30](level)
+    - [Rollo Kueche](device) [ausschalten](action:aus)
+    - schalte [Rollo Rosen](device) [ein](action:ein)
+    - [Rollo Rosen](device) [aus](action:aus)
+    - mach [Rollo Rosen](device) [an](action:ein)
+    - stelle [Rollo Rosen](device) auf [50](level) Prozent
+    - dimme [Rollo Rosen](device) auf [30](level)
+    - [Rollo Rosen](device) [ausschalten](action:aus)
+    - schalte [Rollo Schlafzimmer links](device) [ein](action:ein)
+    - [Rollo Schlafzimmer links](device) [aus](action:aus)
+    - mach [Rollo Schlafzimmer links](device) [an](action:ein)
+    - stelle [Rollo Schlafzimmer links](device) auf [50](level) Prozent
+    - dimme [Rollo Schlafzimmer links](device) auf [30](level)
+    - [Rollo Schlafzimmer links](device) [ausschalten](action:aus)
+    - schalte [Rollo Schlafzimmer rechts](device) [ein](action:ein)
+    - [Rollo Schlafzimmer rechts](device) [aus](action:aus)
+    - mach [Rollo Schlafzimmer rechts](device) [an](action:ein)
+    - stelle [Rollo Schlafzimmer rechts](device) auf [50](level) Prozent
+    - dimme [Rollo Schlafzimmer rechts](device) auf [30](level)
+    - [Rollo Schlafzimmer rechts](device) [ausschalten](action:aus)
+    - schalte [Rollo Strasse](device) [ein](action:ein)
+    - [Rollo Strasse](device) [aus](action:aus)
+    - mach [Rollo Strasse](device) [an](action:ein)
+    - stelle [Rollo Strasse](device) auf [50](level) Prozent
+    - dimme [Rollo Strasse](device) auf [30](level)
+    - [Rollo Strasse](device) [ausschalten](action:aus)
+    - schalte [Rollo Wein links](device) [ein](action:ein)
+    - [Rollo Wein links](device) [aus](action:aus)
+    - mach [Rollo Wein links](device) [an](action:ein)
+    - stelle [Rollo Wein links](device) auf [50](level) Prozent
+    - dimme [Rollo Wein links](device) auf [30](level)
+    - [Rollo Wein links](device) [ausschalten](action:aus)
+    - schalte [Rollo Wein Mitte](device) [ein](action:ein)
+    - [Rollo Wein Mitte](device) [aus](action:aus)
+    - mach [Rollo Wein Mitte](device) [an](action:ein)
+    - stelle [Rollo Wein Mitte](device) auf [50](level) Prozent
+    - dimme [Rollo Wein Mitte](device) auf [30](level)
+    - [Rollo Wein Mitte](device) [ausschalten](action:aus)
+    - schalte [Rollo Wein rechts](device) [ein](action:ein)
+    - [Rollo Wein rechts](device) [aus](action:aus)
+    - mach [Rollo Wein rechts](device) [an](action:ein)
+    - stelle [Rollo Wein rechts](device) auf [50](level) Prozent
+    - dimme [Rollo Wein rechts](device) auf [30](level)
+    - [Rollo Wein rechts](device) [ausschalten](action:aus)
+    - schalte [Rollo Wohnzimmertuer](device) [ein](action:ein)
+    - [Rollo Wohnzimmertuer](device) [aus](action:aus)
+    - mach [Rollo Wohnzimmertuer](device) [an](action:ein)
+    - stelle [Rollo Wohnzimmertuer](device) auf [50](level) Prozent
+    - dimme [Rollo Wohnzimmertuer](device) auf [30](level)
+    - [Rollo Wohnzimmertuer](device) [ausschalten](action:aus)
+    - schalte [Sauna](device) [ein](action:ein)
+    - [Sauna](device) [aus](action:aus)
+    - mach [Sauna](device) [an](action:ein)
+    - stelle [Sauna](device) auf [50](level) Prozent
+    - dimme [Sauna](device) auf [30](level)
+    - [Sauna](device) [ausschalten](action:aus)
+    - schalte [Schlafzimmer](device) [ein](action:ein)
+    - [Schlafzimmer](device) [aus](action:aus)
+    - mach [Schlafzimmer](device) [an](action:ein)
+    - stelle [Schlafzimmer](device) auf [50](level) Prozent
+    - dimme [Schlafzimmer](device) auf [30](level)
+    - [Schlafzimmer](device) [ausschalten](action:aus)
+    - schalte [Schreibtischlampe](device) [ein](action:ein)
+    - [Schreibtischlampe](device) [aus](action:aus)
+    - mach [Schreibtischlampe](device) [an](action:ein)
+    - stelle [Schreibtischlampe](device) auf [50](level) Prozent
+    - dimme [Schreibtischlampe](device) auf [30](level)
+    - [Schreibtischlampe](device) [ausschalten](action:aus)
+    - schalte [Steckdose Beach rechts](device) [ein](action:ein)
+    - [Steckdose Beach rechts](device) [aus](action:aus)
+    - mach [Steckdose Beach rechts](device) [an](action:ein)
+    - stelle [Steckdose Beach rechts](device) auf [50](level) Prozent
+    - dimme [Steckdose Beach rechts](device) auf [30](level)
+    - [Steckdose Beach rechts](device) [ausschalten](action:aus)
+    - schalte [Steckdose Buegeleisen](device) [ein](action:ein)
+    - [Steckdose Buegeleisen](device) [aus](action:aus)
+    - mach [Steckdose Buegeleisen](device) [an](action:ein)
+    - stelle [Steckdose Buegeleisen](device) auf [50](level) Prozent
+    - dimme [Steckdose Buegeleisen](device) auf [30](level)
+    - [Steckdose Buegeleisen](device) [ausschalten](action:aus)
+    - schalte [Steckdose Couch](device) [ein](action:ein)
+    - [Steckdose Couch](device) [aus](action:aus)
+    - mach [Steckdose Couch](device) [an](action:ein)
+    - stelle [Steckdose Couch](device) auf [50](level) Prozent
+    - dimme [Steckdose Couch](device) auf [30](level)
+    - [Steckdose Couch](device) [ausschalten](action:aus)
+    - schalte [Steckdose Lexa](device) [ein](action:ein)
+    - [Steckdose Lexa](device) [aus](action:aus)
+    - mach [Steckdose Lexa](device) [an](action:ein)
+    - stelle [Steckdose Lexa](device) auf [50](level) Prozent
+    - dimme [Steckdose Lexa](device) auf [30](level)
+    - [Steckdose Lexa](device) [ausschalten](action:aus)
+    - schalte [Steckdose Nordfenster](device) [ein](action:ein)
+    - [Steckdose Nordfenster](device) [aus](action:aus)
+    - mach [Steckdose Nordfenster](device) [an](action:ein)
+    - stelle [Steckdose Nordfenster](device) auf [50](level) Prozent
+    - dimme [Steckdose Nordfenster](device) auf [30](level)
+    - [Steckdose Nordfenster](device) [ausschalten](action:aus)
+    - schalte [Steckdose Treppe](device) [ein](action:ein)
+    - [Steckdose Treppe](device) [aus](action:aus)
+    - mach [Steckdose Treppe](device) [an](action:ein)
+    - stelle [Steckdose Treppe](device) auf [50](level) Prozent
+    - dimme [Steckdose Treppe](device) auf [30](level)
+    - [Steckdose Treppe](device) [ausschalten](action:aus)
+    - schalte [Steckdose Wohnzimmertür](device) [ein](action:ein)
+    - [Steckdose Wohnzimmertür](device) [aus](action:aus)
+    - mach [Steckdose Wohnzimmertür](device) [an](action:ein)
+    - stelle [Steckdose Wohnzimmertür](device) auf [50](level) Prozent
+    - dimme [Steckdose Wohnzimmertür](device) auf [30](level)
+    - [Steckdose Wohnzimmertür](device) [ausschalten](action:aus)
+    - schalte [Steckdosen und Zwischenstecker](device) [ein](action:ein)
+    - [Steckdosen und Zwischenstecker](device) [aus](action:aus)
+    - mach [Steckdosen und Zwischenstecker](device) [an](action:ein)
+    - stelle [Steckdosen und Zwischenstecker](device) auf [50](level) Prozent
+    - dimme [Steckdosen und Zwischenstecker](device) auf [30](level)
+    - [Steckdosen und Zwischenstecker](device) [ausschalten](action:aus)
+    - schalte [Stoßstromrelais 1](device) [ein](action:ein)
+    - [Stoßstromrelais 1](device) [aus](action:aus)
+    - mach [Stoßstromrelais 1](device) [an](action:ein)
+    - stelle [Stoßstromrelais 1](device) auf [50](level) Prozent
+    - dimme [Stoßstromrelais 1](device) auf [30](level)
+    - [Stoßstromrelais 1](device) [ausschalten](action:aus)
+    - schalte [Stoßstromrelais 2](device) [ein](action:ein)
+    - [Stoßstromrelais 2](device) [aus](action:aus)
+    - mach [Stoßstromrelais 2](device) [an](action:ein)
+    - stelle [Stoßstromrelais 2](device) auf [50](level) Prozent
+    - dimme [Stoßstromrelais 2](device) auf [30](level)
+    - [Stoßstromrelais 2](device) [ausschalten](action:aus)
+    - schalte [Teufel](device) [ein](action:ein)
+    - [Teufel](device) [aus](action:aus)
+    - mach [Teufel](device) [an](action:ein)
+    - stelle [Teufel](device) auf [50](level) Prozent
+    - dimme [Teufel](device) auf [30](level)
+    - [Teufel](device) [ausschalten](action:aus)
+    - schalte [Urlaubsschaltung Status](device) [ein](action:ein)
+    - [Urlaubsschaltung Status](device) [aus](action:aus)
+    - mach [Urlaubsschaltung Status](device) [an](action:ein)
+    - stelle [Urlaubsschaltung Status](device) auf [50](level) Prozent
+    - dimme [Urlaubsschaltung Status](device) auf [30](level)
+    - [Urlaubsschaltung Status](device) [ausschalten](action:aus)
+    - schalte [Verdichter Status](device) [ein](action:ein)
+    - [Verdichter Status](device) [aus](action:aus)
+    - mach [Verdichter Status](device) [an](action:ein)
+    - stelle [Verdichter Status](device) auf [50](level) Prozent
+    - dimme [Verdichter Status](device) auf [30](level)
+    - [Verdichter Status](device) [ausschalten](action:aus)
+    - schalte [Wandlicht](device) [ein](action:ein)
+    - [Wandlicht](device) [aus](action:aus)
+    - mach [Wandlicht](device) [an](action:ein)
+    - stelle [Wandlicht](device) auf [50](level) Prozent
+    - dimme [Wandlicht](device) auf [30](level)
+    - [Wandlicht](device) [ausschalten](action:aus)
+    - schalte [Waschküche](device) [ein](action:ein)
+    - [Waschküche](device) [aus](action:aus)
+    - mach [Waschküche](device) [an](action:ein)
+    - stelle [Waschküche](device) auf [50](level) Prozent
+    - dimme [Waschküche](device) auf [30](level)
+    - [Waschküche](device) [ausschalten](action:aus)
+    - schalte [Weihnachtsbaum](device) [ein](action:ein)
+    - [Weihnachtsbaum](device) [aus](action:aus)
+    - mach [Weihnachtsbaum](device) [an](action:ein)
+    - stelle [Weihnachtsbaum](device) auf [50](level) Prozent
+    - dimme [Weihnachtsbaum](device) auf [30](level)
+    - [Weihnachtsbaum](device) [ausschalten](action:aus)
+    - schalte [Wetter](device) [ein](action:ein)
+    - [Wetter](device) [aus](action:aus)
+    - mach [Wetter](device) [an](action:ein)
+    - stelle [Wetter](device) auf [50](level) Prozent
+    - dimme [Wetter](device) auf [30](level)
+    - [Wetter](device) [ausschalten](action:aus)
+    - schalte [Wintergarten](device) [ein](action:ein)
+    - [Wintergarten](device) [aus](action:aus)
+    - mach [Wintergarten](device) [an](action:ein)
+    - stelle [Wintergarten](device) auf [50](level) Prozent
+    - dimme [Wintergarten](device) auf [30](level)
+    - [Wintergarten](device) [ausschalten](action:aus)
+    - schalte [Wintergarten Rücklauf](device) [ein](action:ein)
+    - [Wintergarten Rücklauf](device) [aus](action:aus)
+    - mach [Wintergarten Rücklauf](device) [an](action:ein)
+    - stelle [Wintergarten Rücklauf](device) auf [50](level) Prozent
+    - dimme [Wintergarten Rücklauf](device) auf [30](level)
+    - [Wintergarten Rücklauf](device) [ausschalten](action:aus)
+    - schalte [Wintergarten Vorlauf](device) [ein](action:ein)
+    - [Wintergarten Vorlauf](device) [aus](action:aus)
+    - mach [Wintergarten Vorlauf](device) [an](action:ein)
+    - stelle [Wintergarten Vorlauf](device) auf [50](level) Prozent
+    - dimme [Wintergarten Vorlauf](device) auf [30](level)
+    - [Wintergarten Vorlauf](device) [ausschalten](action:aus)
+    - schalte [Wohnzimmer](device) [ein](action:ein)
+    - [Wohnzimmer](device) [aus](action:aus)
+    - mach [Wohnzimmer](device) [an](action:ein)
+    - stelle [Wohnzimmer](device) auf [50](level) Prozent
+    - dimme [Wohnzimmer](device) auf [30](level)
+    - [Wohnzimmer](device) [ausschalten](action:aus)
+    - schalte [Zugang](device) [ein](action:ein)
+    - [Zugang](device) [aus](action:aus)
+    - mach [Zugang](device) [an](action:ein)
+    - stelle [Zugang](device) auf [50](level) Prozent
+    - dimme [Zugang](device) auf [30](level)
+    - [Zugang](device) [ausschalten](action:aus)
+    - schalte [Zwischenstecker 1](device) [ein](action:ein)
+    - [Zwischenstecker 1](device) [aus](action:aus)
+    - mach [Zwischenstecker 1](device) [an](action:ein)
+    - stelle [Zwischenstecker 1](device) auf [50](level) Prozent
+    - dimme [Zwischenstecker 1](device) auf [30](level)
+    - [Zwischenstecker 1](device) [ausschalten](action:aus)
+    - schalte [Zwischenstecker 2](device) [ein](action:ein)
+    - [Zwischenstecker 2](device) [aus](action:aus)
+    - mach [Zwischenstecker 2](device) [an](action:ein)
+    - stelle [Zwischenstecker 2](device) auf [50](level) Prozent
+    - dimme [Zwischenstecker 2](device) auf [30](level)
+    - [Zwischenstecker 2](device) [ausschalten](action:aus)
+    - schalte [Zwischenstecker 3](device) [ein](action:ein)
+    - [Zwischenstecker 3](device) [aus](action:aus)
+    - mach [Zwischenstecker 3](device) [an](action:ein)
+    - stelle [Zwischenstecker 3](device) auf [50](level) Prozent
+    - dimme [Zwischenstecker 3](device) auf [30](level)
+    - [Zwischenstecker 3](device) [ausschalten](action:aus)
+    - schalte [Zwischenstecker 4](device) [ein](action:ein)
+    - [Zwischenstecker 4](device) [aus](action:aus)
+    - mach [Zwischenstecker 4](device) [an](action:ein)
+    - stelle [Zwischenstecker 4](device) auf [50](level) Prozent
+    - dimme [Zwischenstecker 4](device) auf [30](level)
+    - [Zwischenstecker 4](device) [ausschalten](action:aus)
+
+- synonym: ein
+  examples: |
+    - an
+    - einschalten
+    - aktivieren
+    - anmachen
+    - auf
+
+- synonym: aus
+  examples: |
+    - ausschalten
+    - deaktivieren
+    - ausmachen
+    - ab
+
+- synonym: dimm
+  examples: |
+    - dimme
+    - dimmen
+    - stelle
+    - stellen
+    - setze
+    - setzen
+
+- lookup: device
+  examples: |
+    - Alarm
+    - Außenbeleuchtung
+    - Bad oben
+    - Bad unten
+    - Bewaesserung Garten
+    - Bewaesserung Rosen
+    - Bewaesserung Teich
+    - Büro
+    - Computer
+    - Dachgeschoß Vorlauf
+    - Dachgeschoss Rücklauf
+    - Deckenlicht Kueche
+    - Deko Flur
+    - Erdgeschoss Rücklauf
+    - Erdgeschoss Vorlauf
+    - Fenster Garage
+    - Fernseher
+    - Festbeleuchtung
+    - Flur unten
+    - Flurlicht
+    - Frosch
+    - Fussheizung
+    - Garage
+    - Garage ist offen
+    - Garage ist zu
+    - Gargentor
+    - Garten
+    - Gäste WC
+    - Gästezimmer
+    - Heiko
+    - Heizkörperventil Bad oben
+    - Heizkörperventil Büro
+    - Heizkörperventil Heiko
+    - Heizkörperventil Netti
+    - Heizkörperventile
+    - Heizung
+    - Heizungskeller
+    - Infrarotheizung Kueche
+    - Jalosien
+    - Jalousie Beach
+    - Jalousie Fenster zum Wintergarten
+    - Jalousie Garage links
+    - Jalousie Garage rechts
+    - Jalousie Kueche
+    - Jalousie Rosen
+    - Jalousie Schlafzimmer links
+    - Jalousie Schlafzimmer rechts
+    - Jalousie Strasse
+    - Jalousie Wein links
+    - Jalousie Wein Mitte
+    - Jalousie Wein rechts
+    - Jalousie Wohnzimmertuer
+    - Kamin Rücklauf
+    - Kamin Vorlauf
+    - Kellerflur
+    - Klima
+    - Klima B
+    - klima-b-ro
+    - klima-schlafzimmer
+    - klima-wintergarten
+    - Klimaanlagen
+    - Klolicht
+    - Konvektor
+    - Küche
+    - Leselicht
+    - Licht
+    - Licht Esstisch
+    - Licht Fruehstueckstisch
+    - Licht Gaeste WC
+    - Licht Kellertreppe
+    - Licht Lesen
+    - Licht Schlafzimmer
+    - Licht Sitzecke
+    - Licht Wand
+    - Licht Wintergarten Decke
+    - Licht Wintergarten Tisch
+    - Licht Wohnzimmer
+    - Lüftung
+    - Lupe
+    - Netti
+    - Nibe AUX3 Urlaub
+    - Puffer Zone heiß
+    - Puffer Zone kalt
+    - Puffer Zone lau
+    - Puffer Zone warm
+    - Pumpe Dachgeschoss
+    - Pumpe Wintergarten
+    - Radiowecker
+    - Rollo Beach
+    - Rollo Garage links
+    - Rollo Garage rechts
+    - Rollo Kueche
+    - Rollo Rosen
+    - Rollo Schlafzimmer links
+    - Rollo Schlafzimmer rechts
+    - Rollo Strasse
+    - Rollo Wein links
+    - Rollo Wein Mitte
+    - Rollo Wein rechts
+    - Rollo Wohnzimmertuer
+    - Sauna
+    - Schlafzimmer
+    - Schreibtischlampe
+    - Steckdose Beach rechts
+    - Steckdose Buegeleisen
+    - Steckdose Couch
+    - Steckdose Lexa
+    - Steckdose Nordfenster
+    - Steckdose Treppe
+    - Steckdose Wohnzimmertür
+    - Steckdosen und Zwischenstecker
+    - Stoßstromrelais 1
+    - Stoßstromrelais 2
+    - Teufel
+    - Urlaubsschaltung Status
+    - Verdichter Status
+    - Wandlicht
+    - Waschküche
+    - Weihnachtsbaum
+    - Wetter
+    - Wintergarten
+    - Wintergarten Rücklauf
+    - Wintergarten Vorlauf
+    - Wohnzimmer
+    - Zugang
+    - Zwischenstecker 1
+    - Zwischenstecker 2
+    - Zwischenstecker 3
+    - Zwischenstecker 4

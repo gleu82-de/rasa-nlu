@@ -1,0 +1,14 @@
+# Rasa Endpoints Konfiguration
+# Minimal für NLU-Only Setup
+
+# Tracker Store (optional, wenn keine Konversation gespeichert werden soll)
+# tracker_store:
+#   type: InMemoryTrackerStore
+
+# Event Broker (optional, für MQTT Integration später)
+# event_broker:
+#   type: pika
+#   url: localhost
+#   username: guest
+#   password: guest
+#   queue: rasa_events

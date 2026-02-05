@@ -1,0 +1,33 @@
+# Rasa Domain - Intent und Entity Definitionen
+version: "3.1"
+
+intents:
+  - device_control
+
+entities:
+  - device
+  - action
+  - level
+
+slots:
+  device:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: device
+  
+  action:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: action
+  
+  level:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: level
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
