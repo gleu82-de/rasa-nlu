@@ -1,22 +1,12 @@
-# Rasa NLU - Intent Recognition Service
+# Rasa NLU für Voice Assistant
 
-> Natural Language Understanding für Sprachsteuerung - 129 Geräte, deutsche Sprache
+**Status:** ✅ Production Ready  
+**Version:** Rasa 3.6.21 | Python 3.10.19  
+**Letzte Aktualisierung:** 05. Februar 2026
 
-## Features
+Intent Recognition und Entity Extraction für deutschsprachige Voice Commands.
 
-- 🎯 **Intent Recognition** - Erkennt Geräte-Steuerungsbefehle aus natürlicher Sprache
-- 🇩🇪 **Optimiert für Deutsch** - Deutsche Sprachmodelle und Training
-- 🏠 **129 Smart Home Geräte** - Automatisch generierte Trainingsdaten
-- 🔄 **Auto-Deployment** - GitHub Actions für PROD Release
-- 📊 **Testing** - Umfassende Tests für Intent-Erkennung
-
-## Architektur
-
-```
-Voice → STT (Parakeet) → Rasa NLU → MQTT (rasa/intent) → Voice Assistant
-```
-
-## Installation
+## 🚀 Quick Start
 
 ### 1. Python venv erstellen
 
@@ -29,87 +19,101 @@ source venv/bin/activate
 ### 2. Rasa installieren
 
 ```bash
-pip install --upgrade pip
-pip install rasa
-```
+# Aktiviere venv
+source venv/bin/activate
 
-### 3. Training durchführen
+# Training (bei Datenänderungen)
+rasa train nlu --nlu data/nlu.yml --config config.yml --out models
 
-```bash
-rasa train nlu
-```
-
-### 4. Modell testen
-
-```bash
+# Test im Terminal
 rasa shell nlu
-# Eingabe: "Schalte das Licht im Wohnzimmer an"
+
+# HTTP Server starten (Port 5005)
+rasa run --enable-api --model models/<model-name>.tar.gz
 ```
 
-## Verzeichnisstruktur
+## 📊 Projekt-Übersicht
+
+- **Intent:** `device_control`
+- **Entities:** `device`, `action`, `level`
+- **Trainings-Daten:** 946 Beispiele, 129 Geräte
+- **Pipeline:** DIETClassifier (CPU-optimiert)
+- **Quelle:** MariaDB VoiceTargets (exportiert via Red/Devices)
+
+## 🔌 Schnittstelle
+
+**Input:**
+```json
+{"text": "schalte das Licht ein"}
+```
+
+**Output:**
+```json
+{
+  "intent": {"name": "device_control", "confidence": 0.95},
+  "entities": [
+    {"entity": "device", "value": "Licht"},
+    {"entity": "action", "value": "ein"}
+  ]
+}
+```
+
+## 📁 Struktur
 
 ```
 rasa-nlu/
-├── data/
-│   └── nlu.yml              # Training-Daten (129 Geräte)
-├── config/
-│   ├── config.yml           # Rasa Pipeline Config
-│   ├── domain.yml           # Intent/Entity Definitionen
-│   └── endpoints.yml        # API Endpoints
-├── models/                  # Trainierte Modelle (.tar.gz)
-├── scripts/
-│   └── update-nlu.sh        # Update nlu.yml von Red/rasa-training
-├── tests/
-│   └── test-intents.yml     # Test-Fälle
-└── docs/
-    └── TRAINING.md          # Training-Dokumentation
+├── data/nlu.yml         # Training Data
+├── config.yml           # NLU Pipeline
+├── domain.yml           # Intent/Entity Definitionen
+├── models/              # Trainierte Modelle
+└── docs/MIGRATION.md    # Exit-Strategie & Dokumentation
 ```
 
-## Training-Daten
+## 🔧 Wartung
 
-Die `nlu.yml` wird automatisch aus der MariaDB `Sprachsteuerung_Dev` generiert:
-
+**Daten aktualisieren:**
 ```bash
-# In Red-Projekt:
-cd /home/dgl/Projekte/Red/rasa-training
-node test-export.js
-```
-
-Dann nach `rasa-nlu/data/` kopieren.
-
-## Deployment
-
-### Manuelles Deployment
-
-```bash
-# Auf PROD:
-cd ~/rasa-nlu
-source venv/bin/activate
+# In Red/Node-Red: Devices → exportRasaNLU() ausführen
+# Dann:
+cp ../Red/rasa-training/nlu.yml data/nlu.yml
 rasa train nlu
 ```
 
-### Auto-Deployment (geplant)
+**Python 3.10 Status:**
+- Installiert: `/usr/bin/python3.10`
+- venv: `/home/dgl/Projekte/rasa-nlu/venv/`
+- EOL: Oktober 2031
 
-GitHub Actions deployt automatisch nach Git-Push.
+## 📖 Dokumentation
 
-## Development
+- **Vollständige Installation & Migration:** [docs/MIGRATION.md](docs/MIGRATION.md)
+- **Exit-Strategie (2027-2030):** Siehe MIGRATION.md Kapitel "Exit-Strategie"
+- **Alternative Frameworks:** SetFit, spaCy, Hugging Face Transformers
+- **Deployment:** [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
 
-### Test-Intent erkennen
+## ⚠️ Wichtige Hinweise
 
-```bash
-source venv/bin/activate
-echo '{"text": "Licht im Wohnzimmer an"}' | rasa run --enable-api --debug
+- **Rasa Status:** Maintenance Mode (keine neuen Features)
+- **Support bis:** ~2030 (Python 3.10 EOL)
+- **Migration empfohlen:** 2027-2028 → SetFit + spaCy
+- **Schnittstelle:** Dokumentiert für nahtlose Migration
+
+## 🔗 Integration
+
+**Voice Assistant Flow:**
+```
+STT (NeMo) → [Text] → Rasa NLU → [Intent+Entities] → MQTT → Voice Assistant → Device Control
 ```
 
-### Modell evaluieren
+**MQTT Topics (geplant):**
+- Input: `voice/text`
+- Output: `voice/intent`
 
-```bash
-rasa test nlu --nlu data/nlu.yml
-```
+---
 
-## Konfiguration
-
-- **Pipeline**: `LanguageModelFeaturizer` + `DIETClassifier` für deutsche Texte
+**Entwicklung:** GitHub Copilot  
+**Wartung:** DGL  
+**Lizenz:** Privates Projekt
 - **Intents**: `device_control`
 - **Entities**: `device`, `action`, `level`, `duration`, `delay`
 
